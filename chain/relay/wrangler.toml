@@ -1,0 +1,22 @@
+name = "neon-relay"
+main = "worker.mjs"
+account_id = "a9bed7a12ea28d02fa4f1e957edcd4dc"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[vars]
+CONTRACT_ADDRESS = "0x439a3d6c2b2df600c7afab4bfd4eaf6d43617bcf"
+DAILY_CAP = "10"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "83409d5fd135417cb59ab0741501707a"
+
+[[durable_objects.bindings]]
+name = "REGISTRATION_QUEUE"
+class_name = "RegistrationQueue"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["RegistrationQueue"]

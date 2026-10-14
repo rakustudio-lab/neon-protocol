@@ -1,0 +1,605 @@
+{
+  "sourceRevision": "f3ca62d",
+  "files": [
+    {
+      "path": "Assets/NeonProtocol/Editor/AnimatorBuilder.cs",
+      "sha256": "82eaed30641a5225529b0a7d59f3a4f50967a985b4fd57731bcad8bb602e4aaa"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/ArrivalArt.cs",
+      "sha256": "838cbe6d877ae1d1c34704aeefc9332838255499f7982d4658e6adbc89a27278"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/AudioImportRules.cs",
+      "sha256": "a3f4ce1e27b0906e159bb8b417c2d13796ca50b14d7d88f6235bb5d6f99dac92"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/BikeSwap.cs",
+      "sha256": "dd17ed66c8d63d1d66b273a9e7a4b09a794d99b2be12cff5acc5e7a6aaa81f8c"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/BisectBuild.cs",
+      "sha256": "33b1864e949a0282d50858a66abdb506c1e0661d48fc3a07c818f5f2b34f97e6"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/ChamberBuilder.cs",
+      "sha256": "6d6834752512c009d01c25b1bfe873984d18b467048744c0d6287e0c5688de5e"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/CharacterImportRules.cs",
+      "sha256": "a11f84adf18ae889da9f76736d4797049586aa20eea3f8937c1214ca8cd622c8"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/CharacterSetup.cs",
+      "sha256": "f0da8fccfec2dda61f3d985e17147b407618a48c4c6e39018d4db5990adaee8b"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/CryptoSetup.cs",
+      "sha256": "aba798646c52136c2d52a6ed2833dbb8693e6e7b89785c5034dc47b735dcf9b0"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/DemoRecorder.cs",
+      "sha256": "cf6a57d99f0a9454fcad566386b92da9189751c7e306060d417da5bd32f45c92"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/ElevatorBuilder.cs",
+      "sha256": "e2385fcaf76bbbcbd13bd9de390c95147cfb51eed6d27c3d55fd4a4c4d8c2ea7"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/EncounterRoomBuilder.cs",
+      "sha256": "b626e348be5847f1cfa23c6b5c19fe7365ac1f4023d5e11bf1c0412ec6a1740e"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/FinalityBuilder.cs",
+      "sha256": "c19e3f421e2dafb505ce7c96e69510b4783c5b1f6089b7b3857736239b8f4f18"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/FractureArtPass.cs",
+      "sha256": "196a5a47ad9d7f3244a1eba0f22ef1db76ea254e08394ea891bc801b37d62198"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/FractureBuilder.cs",
+      "sha256": "47e9973cf26c223e68aedacc025d191450c6c182962d6ed49377de4648b6c4a1"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/FracturePopulate.cs",
+      "sha256": "6aaefe34c585d8eb7e8c867048d10fa46714d9b1b5861e9b73a539320e3e7d9f"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/IrisBuilder.cs",
+      "sha256": "bc410392b67e7a10affd4f157664a01cf56be0b4c09b3fff624ccb010fb57f8e"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/MapSeal.cs",
+      "sha256": "5e4d4909813e7fabc42fcec26110c3474d827c47c2d10f269319a731c4e0e3a6"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/MonadBuilder.cs",
+      "sha256": "038145a74f85f304546613be235fcbaa32f26fd3f285cdd6f387a02c5bbb7de7"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/NeonBlockTools.cs",
+      "sha256": "09c3a9a79fe6482b35ba4f00c42d66444ef433819871ed25702d5c10d0ae40b3"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/ProfileTop.cs",
+      "sha256": "2d43ad370e8627defae29e95110dd63e814534239d3c4daee9df36cc9f690786"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/QuaterniusSetup.cs",
+      "sha256": "391554e958256667a86a189f84b893364d87989239df309ac624ac82b8bafe1b"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/R1Art.cs",
+      "sha256": "f3795185ac9121df09c072d78d8eb36173881b5c74b37ae7aacc0a6c66739e10"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/RelayRoomBuilder.cs",
+      "sha256": "26bd71f4c69b08110bfce595cf1d381837e3793353a26ec1c5b13aee48653c47"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/RivalRebuild.cs",
+      "sha256": "32cac31874578c80794d3b6bf968ca2ddd3e19561b7b911940167314feefded3"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/RouteArt.cs",
+      "sha256": "49190a2b4ecd108b8af8b0b474316f23995e18ad39a87ac45976d37079e79c39"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/Shots.cs",
+      "sha256": "ceb8e5335274653201a8f1a6dfd40658eb30ab2649d43eae2c56a3877e234cba"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/TrackAudit.cs",
+      "sha256": "ca2ceacc58f4af71e75fc29713d93edb8f5de5147b9768194dadad681dc86f35"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/VaultArt.cs",
+      "sha256": "d2c960f37408935bb97088c38113b9b9065b81edf058883819c7258edf3c9a5d"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/VaultRoomBuilder.cs",
+      "sha256": "f36b1f8771bdb68fb1dd69354fc5f268ed573296d294a7b4467fd56545188f28"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/VaultUpgrade.cs",
+      "sha256": "e613fd664248b4a20fbe31a3c4cc7ac16852c003ffd7d5718fa382f8f3f1b533"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/WeaponRig.cs",
+      "sha256": "615159ffd4d7698446b2bb470994af99483f56a04bb755081b80534f8ec180a8"
+    },
+    {
+      "path": "Assets/NeonProtocol/Editor/WebBuild.cs",
+      "sha256": "619e9bb2a7e422825041e353a56e1e6f8ae4506cfa8e1f8211ca18cdb94b25eb"
+    },
+    {
+      "path": "Assets/NeonProtocol/QA/AuditDirector.cs",
+      "sha256": "03e3de057d0e9fdd7a357787dbcb2dfbaf8b8c6b271110380f3e6aa01ea76e82"
+    },
+    {
+      "path": "Assets/NeonProtocol/QA/PuppetSource.cs",
+      "sha256": "22644b50f434e0bcf52f97585239bec04928d87d1f3d4cc16e6e498f5a13742f"
+    },
+    {
+      "path": "Assets/NeonProtocol/QA/QAHitCounter.cs",
+      "sha256": "f4e30f892858e35db02817cc400ec85a89d7b63c2a90c7fd372af26ec721cc58"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/AI/CompetitorAI.cs",
+      "sha256": "2a25f24c7d5f6b31b773f56f33274a5fd6a037d90c6e6a99569dd889ad31f6f0"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/AI/SentinelDrone.cs",
+      "sha256": "daf383a5aa23abd72b5fa0e1228342879c03b652c47e7c451190b97fda8880e1"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Camera/FirstPersonBody.cs",
+      "sha256": "901374fda7d7e49768cf00d97747e398552ab84cdd00094a593a5443ca83fb13"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Camera/FirstPersonView.cs",
+      "sha256": "de2e66a055d3c9ea67ec0bc7034f403e79c5b2a8ce29a5c1b3f7e1262ca471f8"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Camera/MenuCamera.cs",
+      "sha256": "9f42733ed621f84b3e9ac7054cfcf273fff0dc25034bfcf30b06a610f56ade5e"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Camera/ShoulderRig.cs",
+      "sha256": "0bf848bff28b00544d466e8412758b80372b9978b0e9472c5d62c11a5a0f8ce9"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Core/NeonBlock.cs",
+      "sha256": "fd8613c3ddca93ac53dbcddbeb5937eba947d48b1d3d7565a8079383e234596c"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Core/NoiseSystem.cs",
+      "sha256": "7f5cb4bed817812c03251488ab7209de2e8fd9af45c22048fe73bddfc81eeedc"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Core/NPInput.cs",
+      "sha256": "3757f1f894805f8dd4dc8532ac34c1c26b99f5bb93a3fa07fccce4acfe169268"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Core/QualityPresets.cs",
+      "sha256": "effb6758aa2fbaeb0fd1c54e17b1c0d2ed6d36e91edf8bfed17b5dab45adf669"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Core/RuntimeErrorMonitor.cs",
+      "sha256": "346141ac560b5db8737bd80a7cb18e73ffc8dc705878fc6963930efa05d07cdd"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Core/Settings.cs",
+      "sha256": "e68f93a291f225a13ea040a1e95468f6d258006148ba8fcdd1f4b1a1e3445f3b"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Core/ShaderWarmup.cs",
+      "sha256": "d77718de694e57e1c9f79182aee3c46f60181c6972236b54ef0498c6271d3304"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Core/Springs.cs",
+      "sha256": "0827d76713e1644a33613e4960a90dfec0e59d6f3d3bd2f072c3a14f1268dd4f"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/BikeAutopilot.cs",
+      "sha256": "d55b7175fd88203424709fad3910fc47c2617feb283e8936058f511682dcec1b"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/BikeDrone.cs",
+      "sha256": "3577dc007b3a6ab45f631e14d166f1c007f764310541fa353ef69000a6a6fa01"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/FinalityElevator.cs",
+      "sha256": "8c5b0e14f002e9cb9d6fbd5ba0c6feebfefe8071aae7ce017d05e4d94a1d69fc"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/FinalityRun.cs",
+      "sha256": "39e407a4888b7ae6b2563b9e5243f7fb44411b4e34d28794febb565e0e017480"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/FinalityTrack.cs",
+      "sha256": "ed4b15929ef8f8056d5b72ef67e1bed10b9e20fdf8c1219530e0d8293e9f6a4e"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/GatePulse.cs",
+      "sha256": "fb096279c751a69836446ac5026ea50d89f90674d07485a66ac327b07cb60792"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/Lightcycle.cs",
+      "sha256": "2953b052ef8fce4b40b3e03a42276893beb67b3bbf7444adf9d6a3c8d655ce68"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/RiderHands.cs",
+      "sha256": "153689a56de9d35fd17c4070681878ad30bd0585f78971e7445d308396a2d1f6"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/RiderPose.cs",
+      "sha256": "499ddf6827d47e1ed1af0b61481ec0872c23373e1f33dd7a5ebcb95f906ebd25"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Finality/TrackElement.cs",
+      "sha256": "7e4c88bacd3238590eebd278dd806677bbbf2d47ece6aaf3e903cac6410eeae9"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/AlarmLighting.cs",
+      "sha256": "689bcc0af5115a3efa4c2b68504911c7510e00872ec02fa90cfac0f5c6513484"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/ArtPassRecord.cs",
+      "sha256": "aa51838424b722054447c78efd96484cbf825bb4d11fc30f87aca877203d65c4"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/ArtWall.cs",
+      "sha256": "dbc6121cef7abb7a84bfdd07c12baca97f07e0d6c360d4b5d6b3b7ed78dbafc1"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/AuditProbe.cs",
+      "sha256": "e9c70ae3bcce0c029c8d6a230d4167d6916dc0e5af8768e0eaed9240db6b585a"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/CoreObjective.cs",
+      "sha256": "c004a04984cafa8856d1e84ab19fcb4b4e7a1f83eb863e6fe4d0b77b6ee2e538"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/DemoRun.cs",
+      "sha256": "50c9e5ca8a07d082821bf1f8c41599f8b3b2cb7f6c4cb7cf11cfa1ade8ee6cb7"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/EncounterArm.cs",
+      "sha256": "405e16a060606a978ce7b5e830990a8c218df17a048c304b704d592f8aafddf8"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/ExtractionGate.cs",
+      "sha256": "4bc0b17cf50a79cd0f8ec8d2ec325c7454c0ba0ecac26461ab9fdd11ba0dee04"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/GameBoot.cs",
+      "sha256": "a56738962e60f1598c385b7afb604b2f212f9c58e89349a6b009df7220449e16"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/HeistDirector.cs",
+      "sha256": "494491e75eaf879898f7322cc134eb15d8c0b8893a56ade752cd6675c9d5e1d0"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/IrisRelay.cs",
+      "sha256": "ffd8b4abbde82df550578d0767957c563bdef123f9c34460925e4beeb4e85f39"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/IrisTarget.cs",
+      "sha256": "4d95b4ac2eb7e196887e2c3793d1c78354101af87e69ba7b837c4d202c0ef32a"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/MusicDirector.cs",
+      "sha256": "f0876c65a7062ad8a34f3bd1437a6b03c3032c19c76e380d182e25bf248c7be2"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/PaintballEncounter.cs",
+      "sha256": "330542d3b7137de575ff7b9799d92f0fd8295eb4ff1975b46cb714ce34bf4967"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/PaintTarget.cs",
+      "sha256": "8306ca174460c403958aa2f9964a7dc43cc766372e555baa54b20c24198402eb"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/PlayerAutopilot.cs",
+      "sha256": "b814eef7ff48f70cebb2798810472e71ab0c0786baba2fa720085f8698fd5f3d"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/Relay.cs",
+      "sha256": "818be50b21ce4c1a7fa03ae4ff1af9de46e8c208fa911925adbe2bd853994ea4"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/RoomExit.cs",
+      "sha256": "d813519a8bf55ce8493ab81b78735b0bbef4c4d8474b9cffa17a5e53bb531efa"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/SignatureRecorder.cs",
+      "sha256": "cebe7e00d6c98d026a0b438ac64456f6ef117da28873872b079ba49807831cd3"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/Spin.cs",
+      "sha256": "568e5a53932aabfff8decea63a6fc95fddc69444e49330c70bebdcf17c962e53"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/TagHealth.cs",
+      "sha256": "2e458fdab6b933fe920652fca64f0f5a5e7f8246c6810fd28aa40b3cf25efcfa"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/TargetMover.cs",
+      "sha256": "81cc9b5939574d116eda24084134f1eaff8b17b461a5aab5242ddef615d2c051"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/TestDriver.cs",
+      "sha256": "8021e358c04bdfdc2c7fb3540d9b491894df81f51581722c5817f4fda75be48b"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/TriggerRelay.cs",
+      "sha256": "2570f562625bffe8d796a448de3bfef916c5754d0605488abdc624088cccd1e3"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/VaultNode.cs",
+      "sha256": "7562d44cc32322946cfc90a5cadac6b4722582197a961784bfea78c75528b8a3"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/VaultRings.cs",
+      "sha256": "e0354b42a5eb429026022b80b0b5ee78d3a5fe7ca7fddbb17d95b218bd47126b"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/VaultRoom.cs",
+      "sha256": "b80429f3ac54afdf0e01f71a9837d2ea45737b1d59cb5531f3deca69180be761"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Game/VaultSecurity.cs",
+      "sha256": "fc016199e5c695cf3e6ba5ca401ee9b5de873029a9ea5e81fe2ad7c3269420e9"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Monad/BlockReactor.cs",
+      "sha256": "a50d1d89127804383cc08763e0cdd0b4cb7f62294ec88f9d30fa181a346ba068"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Monad/MonadFeed.cs",
+      "sha256": "585226ccfbeeb138e5a704409a200b81abbf3520e7c75158724f66eb2949fb02"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Paint/PaintDynamic.cs",
+      "sha256": "aa9aff97bbe53ade841e0f7d84458c6d1cd3b6f6727d6f9a91258ad6186c5575"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Paint/PaintSurface.cs",
+      "sha256": "aeb46989801feba1e3610d0cb2c552c5f62d30365a01034e6c6e342bf426e13a"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Paint/PaintSystem.cs",
+      "sha256": "c08e760c21f9d54023e8d26f99925679e2a4bf18079d61ed4116e7a5ba85c85a"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Player/CharacterAnimator.cs",
+      "sha256": "e4c88612dbaf9e0ff80d2917613613c9632ef483a8fd45f40ca60c261530680e"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Player/CharacterFade.cs",
+      "sha256": "5a1d5b9be032ed2df6b1167f582b44c17c3286598ff25b166e56724ad2136b00"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Player/Footsteps.cs",
+      "sha256": "6e89c89970b489f60b977af510229e4193e088797d187649ff8facb7d5f6d29c"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Player/PlayerMotor.cs",
+      "sha256": "395c08f1112abd0e2ab0c0678135596bf5eaac3c74ea8aca573fa8f196ba161b"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Player/PlayerTagController.cs",
+      "sha256": "01838069733739316becde6e4dc3ee8ea77ef9c3c84b6a35cf6724a93bfff039"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Player/TagOutPresenter.cs",
+      "sha256": "829b9ac6021a7adc1c4a1e5799203512321fe2aa346b4570c0974a80705d6491"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Rendering/AmbientFromTrilight.cs",
+      "sha256": "63af8e740a3ed654bf89fab080d21bbb68876a3a6ab40081659b9970748880f7"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/UI/DevHud.cs",
+      "sha256": "60fd43557e3fb3bddb6df822ca6cd50bab81b291cd7f447baa8aaebdb3723484"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Weapon/ImpactFX.cs",
+      "sha256": "f555786ae0ab18d089c86d35b3a55d2ca89cf9e1bf6791971424551a779c976a"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Weapon/PaintProjectiles.cs",
+      "sha256": "2d6b610be57d52ee76eff133bcea08180b0a969687dd8deaafec06ad8e223429"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Weapon/PaintRifle.cs",
+      "sha256": "296492e71b650a63a9324e7ea39bc560d3689c6dacb79514ebe2f3a7b52ac519"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Weapon/RifleFrameDriver.cs",
+      "sha256": "f63fa715dcc1fe8a374825bcdffc94e1b505fa051ee1b1ae20a6d110ad0aa3d1"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Weapon/RifleReloadVisual.cs",
+      "sha256": "a9c97c76ec0efc2e3e826abfe173b42fa0366c50685dbbaa0c9f4151cd1591e0"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Web/WebBridge.cs",
+      "sha256": "5a10f31228dc363e6da18be359d1a17806afa63e47229e5818ff507a13efc7cd"
+    },
+    {
+      "path": "Assets/NeonProtocol/Scripts/Web/WebHud.cs",
+      "sha256": "ae9320c123cb0b8bcfbf70ea02da16acfc0df1a1f9a067e02784d3310676bdfb"
+    },
+    {
+      "path": "Assets/NeonProtocol/Shaders/NP_SkyBackdrop.shader",
+      "sha256": "f4cea01166585f55e6936b37734c8e7780613874660dc811305048af0c4b47d5"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/config.js",
+      "sha256": "90f5929d3924468934b3906328d42e01b28e7dc99598a318bc8c93bbcfdd6f59"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/halloffame.html",
+      "sha256": "e83b74bcf7a84d72a6bfc20c9f0d9f646da29eb19a9af49ce3276243868ff70b"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/index.html",
+      "sha256": "cd53086372404f2e613a99df553427db60bd5b4888c2d4b816a8d65505bb7e54"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/bike.svg",
+      "sha256": "7bb31c8d775a758eee782bc045757d7b8b355f4425312a0a3882dfce2a665d3f"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/bolt.svg",
+      "sha256": "8af64e9945643ebefbfdc347e0d59fd535226f7f8f3a3a11380b34e2f5414200"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/chain.svg",
+      "sha256": "6108273cc18d3e592b728d70ed4f405fdbb2c037ae8b72e616b274806cc31497"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/common_orb.svg",
+      "sha256": "c1e09212b3b794a5121299a422cda99707a1e6922428abc063d84c614025d61b"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/confirm.svg",
+      "sha256": "e7308f6b6f5a6027e1f7c2e5517ba12b82ee00e32365fc68d3ac0080f1f5ab4f"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/drone.svg",
+      "sha256": "402635f6391a843d0f7e6ca213dea312c8abf5575e1cc0fd77ffab7995efc718"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/emblem-next.svg",
+      "sha256": "8f48c76fc7ba58148265b095ebc27f20ee105d2a4362e7c4d2a2d126cca5a7c3"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/emblem.svg",
+      "sha256": "2334d8f667774244d9de8da9386de628755a47202524bbb3e741069d52335995"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/epic_orb.svg",
+      "sha256": "7f6975c9813ae3c6e25aca9aaada7209a1e9d788897fc64d1a29d2e0f3aeedaf"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/gem.svg",
+      "sha256": "c35d1c39888e06686f6fbfc847cfc1aebefb7432b74f95cafcc7e4b69230d635"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/legendary_orb.svg",
+      "sha256": "812c5db5f6920cd9dc27b3129682139b34e0a0cc585b4fd09c0ad08e025ceabf"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/lock.svg",
+      "sha256": "a59295c0f3c45ec22ffe19ba726381463efad4b6425ed46deb9599a3a401b6b4"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/museum.svg",
+      "sha256": "bbf3200b46f84b11bc6dad9e10399a4790a41ab117ce369204e1836c6f154787"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/nft.svg",
+      "sha256": "80259b6f2451456b4cf3cfde22c15a08b1f0aca58b0977bde3b7c8f0c2fa5226"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/paint.svg",
+      "sha256": "80f418c34701b38d2ed845b953f0a1ce6bd1f6729e288caf6d60ccb5ba309646"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/rare_orb.svg",
+      "sha256": "0e251ef9f5ee985b8d540281c11a51c16bf5c07ed79c7c921189b6910f0fb9ea"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/speed.svg",
+      "sha256": "3514424c76da1eb6875c3013839a77923c08990560ef6163988f5dbbf25e65ba"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/target.svg",
+      "sha256": "a3d4ad82d4ff0c4ac1eda94d4e8441927ca959ce4786868ae7fea4cb32c944ad"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/trophy.svg",
+      "sha256": "3a773be8c71ceb17a1ea780a27418c2d47f59c739d4bf9bd83cf4a25b9eb814a"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/wallet.svg",
+      "sha256": "2e9e969251978e931fe90d3d456288945c9cbc4887efb2dedd70e699c45e5f73"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/icons/wordmark.svg",
+      "sha256": "eaf77a214cfe6c83d1f6e5cb2896630b8c7586c81efd39c9b4c5576393dcbfba"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/neon-astra.css",
+      "sha256": "206e69ae9675f4d4dd402e14ecd6a36f82873e82ef7827b7d48508f984b7dd0e"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/neon-raku.css",
+      "sha256": "752509ac745e4fe4152c481b5d0f8050c2944432d159cb1a81b08764912c3835"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/neon-ui.js",
+      "sha256": "068d7b29d3d1df8b3e788d4f8307c0610ecf909dcae09017d1c9adfc41cb3fff"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/neon.css",
+      "sha256": "7308c0a3fe815685e65d4b0e1c26854ca08e2372cda3f761dd1c7ce7e7fdc99a"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/signature.js",
+      "sha256": "150a086919e99e0a603c4e90fe094440afe5e8b2da031817f637983a9c36f0a5"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/TemplateData/social.js",
+      "sha256": "78790cf19e6bac6b229ff3f0ce3fa3dd30fac8affa29583dd4d9ceb358c664ec"
+    },
+    {
+      "path": "Assets/WebGLTemplates/NeonProtocol/trace.html",
+      "sha256": "f9530fea2d53b6dcb6ffbf42bcfe62cd1b4a09c35690d15b4925b9f0fb6cd1d1"
+    },
+    {
+      "path": "chain/contracts/NeonMark.sol",
+      "sha256": "da9cfbad79ef9ad8483757304b31b54855841deffc589dc321c6133cd599d5c0"
+    },
+    {
+      "path": "chain/contracts/NeonRegistry.sol",
+      "sha256": "7b67a3b9b6c894b24568d4cd7dee39b6f25cb6830fa4139efc24dfd50b8dae61"
+    },
+    {
+      "path": "chain/package-lock.json",
+      "sha256": "5bbf53497206f30369362a22a69bffe4d447dfd4059cd46059df8e063d31d59d"
+    },
+    {
+      "path": "chain/package.json",
+      "sha256": "0843cf5d05263f96ea21b9343fd4f28becb33d47613c50f9af09c4c46ee6d23f"
+    },
+    {
+      "path": "chain/relay/worker.mjs",
+      "sha256": "5e8830334bba8a866995b4101afa8df9cce0a10295c4169be337888fa233897b"
+    },
+    {
+      "path": "chain/relay/wrangler.toml",
+      "sha256": "aa5c6ceefc5e4af0f60724324051a88a797cce044124cf73a37cb21ad7289907"
+    },
+    {
+      "path": "chain/scripts/compile.mjs",
+      "sha256": "29d5db526dc568633248d8baab8328a6e27e724e3f577d7a3ed7c32a39744a5c"
+    },
+    {
+      "path": "chain/scripts/localtest.mjs",
+      "sha256": "417bad963a605df0bcf6aa0562d37e298c068d8c5ac870d122b2fb166cbf04af"
+    },
+    {
+      "path": "Packages/manifest.json",
+      "sha256": "a82fa121c517bac3cf9fb594d58b818d27553ce6270b5efe45fe64b311d941b0"
+    },
+    {
+      "path": "Packages/packages-lock.json",
+      "sha256": "0cc2118d2bdff7c6fcd45e0c4f3aad76d51edc8a9c472d00e520329968a9f386"
+    }
+  ]
+}

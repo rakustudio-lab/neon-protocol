@@ -1,0 +1,2 @@
+{ "name": "neon-protocol-chain", "private": true, "type": "module",
+  "dependencies": { "solc": "0.8.26", "viem": "2.21.0" } }

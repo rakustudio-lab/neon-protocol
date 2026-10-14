@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%23040309%27/%3E%3Cpath d=%27M32 6l22 26-22 26L10 32z%27 fill=%27none%27 stroke=%27%2316f5d6%27 stroke-width=%276%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%277%27 fill=%27%23ff2bd6%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{{ PRODUCT_NAME }}}</title>
+<link rel="stylesheet" href="TemplateData/neon.css">
+<link rel="stylesheet" href="TemplateData/neon-astra.css">
+<link rel="stylesheet" href="TemplateData/neon-raku.css">
+<script>window.NEON_CONFIG = window.NEON_CONFIG || {};</script>
+<script src="config.js" onerror=""></script>
+<script type="module" src="TemplateData/neon-ui.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #0a0710; overflow: hidden; color: #e8e6ff; font-family: "Segoe UI", system-ui, sans-serif; }
+  #c { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; outline: none; opacity: 0; transition: opacity .6s ease; }
+  #c.on { opacity: 1; }
+  #load { position: fixed; inset: 0; display: grid; place-items: center; transition: opacity .5s ease; background: radial-gradient(ellipse at 50% 45%, #140e22 0%, #0a0710 70%); }
+  #load.off { opacity: 0; pointer-events: none; }
+  .box { width: min(440px, 80vw); text-align: center; }
+  .title { font-weight: 800; letter-spacing: .28em; font-size: clamp(22px, 4vw, 34px); margin-bottom: 6px; }
+  .title { font-family: "Orbitron", sans-serif; } .title b { color: #b57bff; text-shadow: 0 0 18px rgba(181,123,255,.45); }
+  .sub { font-size: 12px; letter-spacing: .3em; opacity: .55; margin-bottom: 28px; }
+  .bar { height: 3px; background: rgba(255,255,255,.08); border-radius: 0; overflow: hidden; }
+  .fill { height: 100%; width: 0%; background: linear-gradient(90deg, #7a52b8, #b57bff); box-shadow: 0 0 12px #b57bff; transition: width .2s ease; }
+  .state { margin-top: 12px; font-size: 12px; letter-spacing: .18em; opacity: .7; min-height: 16px; }
+  .err { color: #ff6b8a; }
+</style>
+</head>
+<body>
+<canvas id="c" tabindex="-1"></canvas>
+<div id="load"><div class="box">
+  <div class="title">NEON <b>PROTOCOL</b></div>
+  <div class="sub">PAINT THE WORLD · STEAL THE CORE</div>
+  <div class="bar"><div class="fill" id="fill"></div></div>
+  <div class="state" id="state">LOADING</div>
+</div></div>
+<script>
+  const qs = new URLSearchParams(location.search);
+  const fill = document.getElementById("fill"), state = document.getElementById("state"), load = document.getElementById("load"), canvas = document.getElementById("c");
+  const t0 = performance.now();
+  window.__np = window.__np || {};
+  window.__np.marks = { start: 0 };
+  let instance = null;
+  window.onNeonEvent = (e) => {
+    if (e.type === "warmup") { fill.style.width = (60 + e.progress * 40).toFixed(1) + "%"; state.textContent = "PREPARING GRAPHICS " + Math.round(e.progress * 100) + "%"; if (e.progress >= 1) reveal(); }
+    if (window.onNeonGameEvent) window.onNeonGameEvent(e);
+  };
+  window.onNeonReady = () => { window.__np.marks.ready = performance.now() - t0; state.textContent = "PREPARING GRAPHICS"; };
+  function reveal() {
+    if (canvas.classList.contains("on")) return;
+    window.__np.marks.playable = performance.now() - t0; window.__npPlayable = true;
+    canvas.classList.add("on"); load.classList.add("off"); canvas.focus();
+  }
+  const s = document.createElement("script");
+  s.src = "Build/{{{ LOADER_FILENAME }}}";
+  s.onload = () => {
+    createUnityInstance(canvas, {
+      dataUrl: "Build/{{{ DATA_FILENAME }}}",
+      frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+      codeUrl: "Build/{{{ CODE_FILENAME }}}",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+      productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+      productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+      matchWebGLToCanvasSize: true,
+      devicePixelRatio: Math.min(window.devicePixelRatio || 1, 1.5),
+    }, (p) => { fill.style.width = (p * 60).toFixed(1) + "%"; state.textContent = p < 0.9 ? "DOWNLOADING " + Math.round(p / 0.9 * 100) + "%" : "STARTING"; })
+    .then((inst) => {
+      instance = window.unityInstance = inst;
+      window.__np.marks.instance = performance.now() - t0;
+      const test = qs.get("test"); if (test) inst.SendMessage("_Systems", "RunWebTest", test);
+      const q = qs.get("quality"); if (q) inst.SendMessage("_Systems", "SetQualityFromWeb", q);
+      setTimeout(reveal, 20000);   // never trap the player behind the loader
+    })
+    .catch((m) => { state.innerHTML = '<span class="err">' + String(m) + '</span>'; });
+  };
+  s.onerror = () => { state.innerHTML = '<span class="err">Failed to load the game files.</span>'; };
+  document.body.appendChild(s);
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* R4 · Raku Studio identity for the game's MENUS, RESULT and VAULT panels (one visual family with the website,
+   site/raku-system.css): black #0A0710, violet #B57BFF, off-white #F2EDE4; Orbitron display, Space Grotesk body,
+   JetBrains Mono labels; squared buttons with corner accents. Loaded last. The combat HUD (#hud, .h-*, .hud-*,
+   #bikeHud, crosshair) is deliberately NOT restyled: gameplay keeps one objective, crosshair and essential status. */
+:root{--rk-bg:#0a0710;--rk-panel:#0f0a1a;--rk-raise:#140e22;--rk-border:#2a1f3d;--rk-border-hi:#4a3a6d;--rk-text:#f2ede4;--rk-dim:#a79ebc;--rk-accent:#b57bff;--rk-accent-hi:#d7b8ff;--rk-deep:#7a52b8}
+
+/* ---- surfaces: menu, drawers, briefing / pause / result screens, vault inspect + vault bar ---- */
+#np-menu{background:linear-gradient(90deg,#0a0710f2,#0a0710c4 40%,#0a071000 78%),linear-gradient(0deg,#0a0710c0,transparent 45%);color:var(--rk-text);font-family:var(--ui)}
+#np-menu .glass,.drawer.glass,.screen .glass,#inspect .glass,#vaultHud .vh-top{background:var(--rk-panel);border:1px solid var(--rk-border-hi);border-radius:0;box-shadow:inset 3px 0 var(--rk-accent),0 18px 50px #0008;backdrop-filter:none}
+.screen{background:radial-gradient(ellipse at 50% 40%,#140e22e6,#0a0710f2 70%)}
+.drawer{background:var(--rk-panel)}
+.drawer h2,.intro h2,.result h1,.lockhelp h2,#inspect .insp-info h3{font-family:var(--display);color:var(--rk-text);letter-spacing:-.01em}
+.drawer .sub,.kicker,.screen .kicker,#np-menu .card h3,.m-req,.m-quiet,.m-link,.drawer h4,.kv span:nth-child(odd),#inspect .row span:first-child,.result .details summary{font-family:var(--mono);color:var(--rk-dim);letter-spacing:.12em}
+.kicker,.screen .kicker{color:var(--rk-accent)}
+.screen p,.drawer p,#inspect .note{color:var(--rk-dim)}
+.m-promise{font-family:var(--display);color:var(--rk-text)}
+
+/* ---- buttons: squared, violet primary with corner accents, ghost secondary ---- */
+#np-menu .mbtn,.screen .btn,.drawer .btn,#inspect .btn{position:relative;border-radius:0;min-height:48px;padding:13px 20px;font:900 11px/1.4 var(--display);letter-spacing:.09em;text-transform:uppercase;background:transparent;color:var(--rk-text);border:1px solid var(--rk-border-hi);box-shadow:none;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s}
+#np-menu .mbtn.primary,.screen .btn.primary,.drawer .btn.primary,#inspect .btn.primary{background:var(--rk-accent);color:var(--rk-bg);border-color:var(--rk-accent)}
+#np-menu .mbtn.primary::before,#np-menu .mbtn.primary::after,.screen .btn.primary::before,.screen .btn.primary::after,.drawer .btn.primary::before,.drawer .btn.primary::after,#inspect .btn.primary::before,#inspect .btn.primary::after{content:"";position:absolute;width:8px;height:8px;border:1px solid var(--rk-accent);pointer-events:none}
+#np-menu .mbtn.primary::before,.screen .btn.primary::before,.drawer .btn.primary::before,#inspect .btn.primary::before{top:-5px;left:-5px;border-right:0;border-bottom:0}
+#np-menu .mbtn.primary::after,.screen .btn.primary::after,.drawer .btn.primary::after,#inspect .btn.primary::after{bottom:-5px;right:-5px;border-left:0;border-top:0}
+#np-menu .mbtn.primary:hover,.screen .btn.primary:hover:not(:disabled),.drawer .btn.primary:hover:not(:disabled),#inspect .btn.primary:hover:not(:disabled){transform:translateY(-2px);background:var(--rk-accent-hi);box-shadow:0 0 24px #b57bff35}
+#np-menu .mbtn:not(.primary):hover,.screen .btn:not(.primary):hover:not(:disabled),.drawer .btn:not(.primary):hover:not(:disabled),#inspect .btn:not(.primary):hover:not(:disabled){border-color:var(--rk-accent);color:var(--rk-accent);background:#b57bff0c}
+.screen .btn.cyan,.drawer .btn.cyan,#inspect .btn.cyan{border-color:var(--rk-accent);color:var(--rk-accent-hi)}
+.screen .btn:disabled,.drawer .btn:disabled,#inspect .btn:disabled{opacity:.42;transform:none;box-shadow:none}
+#np-menu .mbtn:focus-visible,.screen .btn:focus-visible,.drawer .btn:focus-visible,#inspect .btn:focus-visible,.m-link:focus-visible{outline:2px solid var(--rk-accent-hi);outline-offset:6px}
+.m-link{color:var(--rk-accent-hi)}
+.m-link:hover{color:var(--rk-text)}
+.pill,#np-menu .pill{border-radius:0;border-color:var(--rk-border-hi);font-family:var(--mono)}
+.drawer input.name{border-radius:0;background:var(--rk-raise);border:1px solid var(--rk-border-hi);color:var(--rk-text);font-family:var(--mono)}
+.list .it{border-radius:0;border-color:var(--rk-border)}
+
+/* ---- result: one clear story (You escaped / This is your mark), states, quiet details ---- */
+.result .info .lede{font:600 18px/1.3 var(--ui);color:var(--rk-accent-hi);margin:-4px 0 6px}
+.result .big{font-family:var(--mono);color:var(--rk-text)}
+.result .states{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.result .states .st{font:500 10px/1 var(--mono);letter-spacing:.1em;padding:7px 9px;border:1px solid var(--rk-border-hi);color:var(--rk-dim)}
+.result .states .st.ok{border-color:var(--rk-accent);color:var(--rk-text);background:#b57bff18}
+.result .states .st.on{border-color:var(--rk-accent-hi);color:var(--rk-accent-hi)}
+.result .row-btns.main{align-items:center}
+.result .details{margin-top:14px;border-top:1px solid var(--rk-border);padding-top:10px}
+.result .details summary{cursor:pointer;font-size:11px}
+.result .details[open] summary{color:var(--rk-accent-hi)}
+.result .status .mono,.screen .status .mono{font-size:11px;word-break:break-all;color:var(--rk-accent-hi)}
+.reg .s.ok i{background:var(--rk-accent)}
+
+/* ---- pre-run wallet note: quiet, one line ---- */
+.m-wallet,.intro .wallet-note{font:500 11px/1.5 var(--mono);color:var(--rk-dim);letter-spacing:.02em;max-width:560px}
+.m-wallet .m-link,.intro .wallet-note .m-link{font:inherit;color:var(--rk-accent-hi);text-decoration:underline;padding:0;background:none;border:0;cursor:pointer}
+
+/* ---- pointer lock help ---- */
+.lockhelp{max-width:620px;margin:auto;padding:32px 38px}
+.lockhelp p{line-height:1.55}
+
+/* ---- vault ---- */
+#vaultHud .vh-top b{font-family:var(--display);color:var(--rk-text)}
+#vaultHud .vh-top span{font-family:var(--mono);color:var(--rk-accent-hi)}
+#vaultHud .vh-prompt{border-radius:0;background:var(--rk-panel);border:1px solid var(--rk-accent);font-family:var(--mono)}
+#inspect .note{font-size:11px;line-height:1.5;margin:8px 0}
+
+@media(prefers-reduced-motion:reduce){#np-menu .mbtn,.screen .btn,.drawer .btn,#inspect .btn{transition:none;transform:none}}
+
+.pad-help{margin:18px 0;max-width:650px}.pad-help summary{cursor:pointer;color:#d0acff}.pad-help p{font-size:14px;line-height:1.5;color:#d7cfe2}
+
+/* Keep live network diagnostics in the menu; the play HUD stays focused on the objective. */
+.h-net{display:none!important}
+
+/* R6 extraction payoff: a short reveal, instead of an abrupt result swap. */
+.result{animation:neon-result-in .6s cubic-bezier(.2,.8,.2,1) both}.result>.art{animation:neon-art-in .85s cubic-bezier(.2,.8,.2,1) both}.profile-runs .row{gap:12px;padding:9px 0;border-bottom:1px solid #b57bff25}.profile-runs{font:12px/1.6 var(--mono)}@keyframes neon-result-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes neon-art-in{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.result,.result>.art{animation:none}}
+
+/* R6 visor: quiet peripheral framing, clear central sightline. */
+#hud::before{content:"";position:absolute;inset:17px 20px;pointer-events:none;border:1px solid #b4a0ff28;border-radius:28px 28px 56px 56px;box-shadow:inset 0 0 55px #09081b24;clip-path:polygon(0 0,28% 0,28% 2px,2px 2px,2px 32%,0 32%,0 68%,2px 68%,2px calc(100% - 2px),22% calc(100% - 2px),22% 100%,78% 100%,78% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 68%,100% 68%,100% 32%,calc(100% - 2px) 32%,calc(100% - 2px) 2px,72% 2px,72% 0,100% 0,100% 100%,0 100%)}
+.hud-ammo .reloading{border-color:#d5b76a80}
+.result .art b{color:#d8cdfd}

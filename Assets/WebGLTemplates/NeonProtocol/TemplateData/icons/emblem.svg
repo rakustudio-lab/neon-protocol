@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><defs>
+ <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#9158FF"/><stop offset="0.55" stop-color="#FF3ECC"/><stop offset="1" stop-color="#33E9F1"/></linearGradient>
+ <linearGradient id="violet" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#9158FF"/><stop offset="1" stop-color="#FF3ECC"/></linearGradient>
+ <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1C3D"/><stop offset="1" stop-color="#080918"/></linearGradient>
+ <radialGradient id="halo"><stop offset="0" stop-color="#FFF" stop-opacity=".9"/><stop offset=".15" stop-color="#33E9F1" stop-opacity=".55"/><stop offset=".5" stop-color="#9158FF" stop-opacity=".18"/><stop offset="1" stop-color="#9158FF" stop-opacity="0"/></radialGradient>
+ <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="9" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ </defs><g transform="translate(128 128) scale(2.0)"><path d="M0 -44 L37 -13 L37 25 L0 46 L-37 25 L-37 -13 Z" fill="none" stroke="url(#grad)" stroke-width="6" stroke-linejoin="bevel"/><path d="M-30 -12 L0 6 L30 -12 M0 -36 L0 40 M-30 24 L0 6 L30 24" fill="none" stroke="url(#grad)" stroke-width="4" opacity=".9"/></g></svg>

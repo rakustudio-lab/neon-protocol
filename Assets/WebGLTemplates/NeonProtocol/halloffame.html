@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEON PROTOCOL · Hall of Fame</title>
+<meta name="description" content="Verified NEON PROTOCOL runs recorded on Monad. Every entry is a real registered Neon Signature.">
+<link rel="stylesheet" href="TemplateData/neon.css">
+<link rel="stylesheet" href="TemplateData/neon-astra.css">
+<link rel="stylesheet" href="TemplateData/neon-raku.css">
+<style>
+  body { margin: 0; min-height: 100vh; background: radial-gradient(1200px 700px at 30% 0%, #2a1350 0%, #0a0a1c 55%, #05050d 100%); color: var(--white); font-family: var(--ui); }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 28px 60px; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  header img { width: 44px; height: 44px; }
+  header .t { font-family: var(--display); font-size: 22px; letter-spacing: .14em; } header .t b { color: var(--pink); }
+  header a { margin-left: auto; color: var(--cyan); text-decoration: none; font-weight: 700; letter-spacing: .12em; font-size: 13px; }
+  h1 { font-family: var(--display); font-size: clamp(32px, 5vw, 58px); margin: 10px 0 6px; letter-spacing: .06em; }
+  .sub { color: var(--muted); letter-spacing: .2em; font-size: 13px; font-weight: 700; margin-bottom: 24px; }
+  .list { display: grid; gap: 12px; }
+  .row { display: grid; grid-template-columns: 56px 96px minmax(0,1fr) auto auto; align-items: center; gap: 16px; padding: 12px 16px; text-decoration: none; color: inherit; }
+  .row:hover { border-color: var(--cyan); }
+  .rank { font-family: var(--display); font-size: 26px; color: var(--violet); text-align: center; }
+  .row:nth-child(1) .rank { color: var(--gold); } .row:nth-child(2) .rank { color: #d9e2ff; } .row:nth-child(3) .rank { color: #ff9f5a; }
+  .row canvas { width: 96px; height: 96px; border-radius: 8px; background: #05050d; }
+  .name { font-size: 20px; font-weight: 700; overflow-wrap: anywhere; } .meta { font-size: 12px; color: var(--muted); font-family: var(--mono); overflow-wrap: anywhere; }
+  .time { font-family: var(--mono); font-size: 26px; color: var(--cyan); }
+  .tag { font-size: 11px; letter-spacing: .14em; font-weight: 800; padding: 5px 9px; border-radius: 999px; border: 1px solid var(--green); color: var(--green); white-space: nowrap; }
+  .tag.self { border-color: var(--gold); color: var(--gold); }
+  .empty { padding: 34px; text-align: center; line-height: 1.7; color: var(--muted); }
+  .empty b { color: var(--white); }
+  .b { display: inline-block; margin-top: 16px; border: 0; background: linear-gradient(90deg, #ff3ecc, #9158ff); color: #fff; padding: 13px 20px; border-radius: 10px; font: 800 13px var(--ui); letter-spacing: .14em; text-decoration: none; }
+  @media (max-width: 720px) { .row { grid-template-columns: 40px 64px minmax(0,1fr); } .row canvas { width: 64px; height: 64px; } .row .time, .row .tag { grid-column: 3; } }
+</style>
+<script src="config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header><img class="wordmark" src="TemplateData/icons/wordmark.svg" alt="NEON PROTOCOL"><a href="index.html">PLAY →</a></header>
+  <h1>HALL OF FAME</h1>
+  <div class="sub">FASTEST VERIFIED EXTRACTIONS · RECORDED ON MONAD · NO INVENTED PLAYERS</div>
+  <div class="list" id="list"><div class="glass empty">Loading the registry…</div></div>
+</div>
+<script type="module">
+import { renderSignature, hexToBytes } from "./TemplateData/signature.js";
+import { CFG, relayGet, fmtTime, esc } from "./TemplateData/social.js";
+const list = document.getElementById("list");
+async function main() {
+  if (!CFG.relay) { list.innerHTML = `<div class="glass empty"><b>The Monad registry is not live yet.</b><br>Registered runs will appear here, verified against their on-chain records. Nothing is shown until real runs exist.<br><a class="b" href="index.html">PLAY NEON PROTOCOL</a></div>`; return; }
+  const g = await relayGet("/gallery?from=0&n=48");
+  if (!g.items.length) { list.innerHTML = `<div class="glass empty"><b>No registered runs yet.</b><br>Finish the adventure and register your Neon Signature to become the first entry.<br><a class="b" href="index.html">PLAY NEON PROTOCOL</a></div>`; return; }
+  const items = g.items.slice().sort((a, b) => Number(a.timeMs) - Number(b.timeMs));
+  list.innerHTML = items.map((it, i) => `<a class="row glass" href="trace.html?id=${it.id}"><div class="rank">${i + 1}</div><canvas data-id="${it.id}"></canvas>
+    <div><div class="name">${esc(it.name || "Runner")}</div><div class="meta">#${it.id} · ${esc(String(it.player).slice(0, 10))}…</div></div>
+    <div class="time">${fmtTime(Number(it.timeMs))}</div><div class="tag ${it.attested ? "" : "self"}">${it.attested ? "VERIFIED" : "SELF-SUBMITTED"}</div></a>`).join("");
+  for (const c of list.querySelectorAll("canvas[data-id]")) {
+    relayGet(`/trace/${c.dataset.id}`).then(t => renderSignature(c, hexToBytes(t.art), { id: Number(c.dataset.id), name: t.name }, { scale: 0.08 })).catch(() => {});
+  }
+}
+main().catch(e => { list.innerHTML = `<div class="glass empty"><b>Registry unreachable.</b><br>${esc(e.message)}</div>`; });
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* Candidate overlay for the EXISTING NeonProtocol WebGL neon.css DOM.
+   Load after neon.css. No changes to handlers, visibility or pointer ownership.
+   Existing licensed @font-face definitions are reused. Integration unverified. */
+:root{--bg:#060915;--surface:#10152b;--surface2:#202547;--cyan:#6af7ff;--pink:#ff43ce;--gold:#ffc978;--white:#f4f4ff;--muted:#acb4cf;--line:#445478;--ink:var(--white);--dim:#acb4cf;--panel:linear-gradient(135deg,#13243bf2,#101328f2)}
+#np-menu{background:linear-gradient(90deg,#050a18f5,#090d20cf 37%,#090d201a 73%),linear-gradient(0deg,#070b1cbb,transparent 45%)}
+#np-menu .glass,.np-ui .glass,.drawer.glass{border-radius:0;backdrop-filter:none;border:1px solid #536487;box-shadow:inset 3px 0 #6af7ff77,0 14px 40px #0004}
+#np-menu .m-top{font-family:var(--mono);letter-spacing:.12em;background:#080d1ddd;border-color:#3c4e72}
+#np-menu .m-left{background:linear-gradient(130deg,#10203ddd,#0b1026e8);border-top:2px solid var(--cyan)}
+#np-menu .m-title{letter-spacing:-.045em;line-height:1.06}
+#np-menu .m-title b{background:linear-gradient(100deg,#ecebff,#aa91ff 62%,#fa77cf);background-clip:text;-webkit-background-clip:text;filter:none}
+#np-menu .m-brand img{filter:drop-shadow(0 0 12px #6af7ff30)}
+#np-menu .m-tag{font-family:var(--mono);font-size:11px;line-height:1.5;letter-spacing:.1em}
+#np-menu .mbtn,.np-ui .btn,.drawer .btn{border-radius:0;border:1px solid #7788b6;min-height:48px;background:linear-gradient(110deg,#203454ed,#1d2048ed);color:var(--white);font-family:var(--display);font-size:12px;line-height:1.4;letter-spacing:.045em;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));box-shadow:inset 3px 0 var(--cyan);transition:background .15s,transform .15s}
+#np-menu .mbtn.primary,.np-ui .btn.primary,.drawer .btn.primary{border-color:#c7b4fc;background:linear-gradient(105deg,#5441dc,#883ac0 72%,#b23196);box-shadow:inset 4px 0 var(--cyan),inset 0 1px #e5c8ff;font-size:17px}
+#np-menu .mbtn:hover:not(:disabled),.np-ui .btn:hover:not(:disabled),.drawer .btn:hover:not(:disabled){background:#30406b;transform:translateX(2px)}
+#np-menu .mbtn:focus-visible,.np-ui .btn:focus-visible,.drawer .btn:focus-visible{outline:0;box-shadow:inset 0 0 0 3px white,inset 6px 0 var(--cyan)}
+#np-menu .mbtn:disabled,.np-ui .btn:disabled,.drawer .btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+#np-menu .mbtn small{font-size:10px;letter-spacing:0}
+#np-menu .pill,.np-ui .pill{border-radius:2px;font-family:var(--mono);background:#0a1328}
+#np-menu .card h3,.np-ui .kicker{font-family:var(--mono);letter-spacing:.1em}
+#np-menu .card .big{font-family:var(--display);font-size:28px}
+#np-menu .m-mission li .n{color:var(--cyan)}
+.np-ui .h-objbar{border-left:4px solid var(--cyan);border-radius:0;background:linear-gradient(120deg,#101f39ef,#111528ef)}
+.np-ui .ob-ch{font-family:var(--mono);letter-spacing:.1em}
+.np-ui .ob-t{font-family:var(--ui);font-weight:600}
+.np-ui .h-net{font-family:var(--mono);border-top:2px solid var(--purple);border-radius:0}
+.np-ui .hud-ammo{border-radius:0;border:1px solid #54688e;border-top:3px solid var(--cyan);background:linear-gradient(130deg,#101d38f0,#17152cf0);box-shadow:0 10px 30px #0005}
+.np-ui .hud-ammo .wt,.np-ui .hud-ammo .wstate{font-family:var(--mono);letter-spacing:.09em}
+.np-ui .hud-ammo .n{font-family:var(--display)}
+.np-ui .hud-ammo .reload,.np-ui .hud-ammo .pbar{border-radius:0}
+.np-ui .h-hint{font-family:var(--mono);border-radius:0;border-bottom:1px solid var(--cyan);background:#0b1427e8}
+.np-ui .b-ch,.np-ui .b-speed,.np-ui .b-shards,.np-ui .b-gun{border-radius:0}
+.np-ui .hud-announce{font-family:var(--display);letter-spacing:.04em}
+@media(max-width:800px){#np-menu .m-left{left:12px;right:12px;width:auto;top:60px;bottom:16px;padding:24px}#np-menu .m-title{font-size:32px}#np-menu .mbtn{font-size:11px}#np-menu .mbtn.primary{font-size:15px}#np-menu .m-right{position:relative;right:auto;top:auto;width:auto;margin-top:16px}#np-menu .m-top{padding:0 12px;font-size:10px;letter-spacing:.04em}}
+@media(prefers-reduced-motion:reduce){#np-menu *, .np-ui *, .drawer *{animation:none!important;transition:none!important}}
